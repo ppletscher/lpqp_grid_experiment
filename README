@@ -1,0 +1,31 @@
+ABOUT
+-----
+
+Demonstrates the usage of the LPQP solver for the Potts model. The actual LPQP
+code can be obtained from:
+
+https://github.com/ppletscher/lpqp
+
+The code was slightly modified after the initial ICML publication, but the results
+seem to be pretty much the same.
+
+
+INSTALL
+-------
+
+The experiments are done using matluster, a collection of Matlab scripts which
+simplifies the experimental evaluations on a cluster. Download it to a
+subdirectory called 'matluster' using the following command:
+
+git clone https://github.com/ppletscher/matluster
+
+Then you can run the experiments by following these steps. This works on the
+cluster of ETH Zurich, for different systems you might need to change a few
+things.
+
+1. copy algo_triplet binary for mplp to grid/ directory.
+2. link to mplp and lpqp matlab code.
+3. run ./compile_on_brutus.sh .
+4. in Matlab run grid_experiment_prepare .
+5. on command line submit the jobs using grid_experiment.sh .
+6. collect all the results by running grid_experiment_collect in Matlab.
